@@ -3,13 +3,13 @@
 <title>first vuejs
 </title></head>
 <style>
-	.color-red { color: red; }
-	.color-blue{color:blue;}
+	.is-loading{background: red;}
 </style>
 <body>
 	
 	<div id="root">
-		<h1 :class="classname">Hello World</h1>
+	<button :class="{ 'is-loading': isLoading }" @click="toggleClass">click mee</button>
+		
 	</div>
 	
 		
@@ -20,9 +20,16 @@
 	var vm = new Vue({
 			el: '#root',
 			data: {
-				classname: 'color-red'
+				isLoading: false
+			},
+			
+			method:{
+			toggleClass()
+			{
+				this.isLoading= true;
 			}
-        })
+			}
+        });
 	</script>
 </body>
 </html>
