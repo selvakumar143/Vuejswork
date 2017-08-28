@@ -3,21 +3,51 @@
 <title>first vuejs</title></head>
 <body>
 	<div id="rdemo">
-		<h1>  {{reversedMassage}}
-		</h1>
+	<!--	<h1>  {{reversedMassage}}		</h1>-->
+	<h2> All Task </h2>
+	<ul>
+		<li v-for="task in tasks"  v-text="task.description"></li>
+	</ul>
+	<h2> Compeleted Task </h2>
+	<ul>
+		<li v-for="task in tasks" v-if="task.completed" v-text="task.description"></li>
+	</ul>
+	
+	
+	<h2> Incompeleted Task </h2>
+	<ul>
+		<li v-for="task in incompleted"  v-text="task.description"></li>
+	</ul>
 	</div>
+	
 	<script src="https://unpkg.com/vue@2.1.3/dist/vue.min.js"></script>
 	<script type="text/javascript">
 	var vm = new Vue({
-			el: '#rdemo',
-			data: {
+			el: '#rdemo',<!--collection of task
+			data:{
+				tasks:[
+						{description: 'store',completed:true},						
+						{description: 'shopping',completed:true},						
+						{description: 'purchase',completed:false},						
+						{description: 'pay',completed:false},						
+						{description: 'visting',completed:true}
+						]
+						},
+						
+			computed:{
+					incompleted(){
+						return this.tasks.filter(task => ! task.completed);
+						}
+					}
+									
+			/* string reverse{
 				message: 'Hello world'
 			},
 			computed:{
-			reversedMassage(){
+			<reversedMassage(){
 			return this.message.split('').reverse().join('');
-			}
-			}
+			}}*/
+			
 			});
 				
 		
