@@ -1,0 +1,21 @@
+<html>
+<head>
+<title>vuejs</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.min.css">
+<style type="text/css">
+	body{
+		padding-top:40px;
+		width:80%;
+		height:80%;}
+</style>
+</head>
+<body>
+
+	<div id="root" class="container">
+		<modal v-if="showmodal" @close="showmodal=false"></modal>
+		<button @click="showmodal=true">Show Model</button>
+		
+	</div>
+	<script src="https://unpkg.com/vue@2.1.3/dist/vue.min.js"></script>
+	 <script src="10th.js"></script> 
+</html>

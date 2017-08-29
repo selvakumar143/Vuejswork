@@ -17,5 +17,6 @@ Vue.component('message',{
 		</article>`
 		});new Vue({
 	el:'#root'
+
 });
 /*  */
