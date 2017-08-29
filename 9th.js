@@ -10,8 +10,7 @@ Vue.component('message',{
 		<div class="message-header">
 			{{title}}			
 			<button type="button" @click=" isVisible = false">X</button>
-		</div>
-		
+		</div>		
 		<div class="message-body">
 			{{body}}
 		</div>
@@ -19,3 +18,4 @@ Vue.component('message',{
 		});new Vue({
 	el:'#root'
 });
+/*  */
