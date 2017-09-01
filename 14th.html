@@ -1,0 +1,28 @@
+<html>
+	<head><title></title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.min.css">
+		<style type="text/css">
+			body{
+				padding-top:40px;
+				width:80%;
+				height:80%;}
+		</style>
+	</head>
+	<body>
+		<div id="root" class="container">
+			<modal>
+				<template slot="header">My Title</template>
+				<!-- <div slot="header">My Title</div> -->
+				Here is my main content..
+				
+				<div slot="footer">
+					<a  class="button is-primary">save changes</a>
+					<a class="button">cancel</a>
+				</div>
+			</modal>
+		</div>
+		<script src="https://unpkg.com/vue@2.4.2""></script>
+		<script src="14.js"></script> 
+
+	</body>
+</html>
