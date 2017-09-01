@@ -1,0 +1,23 @@
+<html>
+	<head><title></title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.min.css">
+		<style type="text/css">
+			body{
+				padding-top:40px;
+				width:80%;
+				height:80%;}
+		</style>
+	</head>
+	<body>
+		<div id="root" class="container">
+			<progress-view inline-template>
+				<div>
+				<h1>Your progress:{{completionRate}}</h1>
+				<p><button @click="completionRate +=10">update</button></p>
+				</progress-view>
+		</div>
+		<script src="https://unpkg.com/vue@2.4.2""></script>
+		<script src="15th.js"></script> 
+
+	</body>
+</html>
